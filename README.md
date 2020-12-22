@@ -27,4 +27,4 @@
 <li>managedByTenantId: Hallinta-tenantin ID</li>
 <li>principalId: Jokaiseen authorization kohtaan laitetaan principalID:ksi hallinta-tenanttiin luoman AD-ryhmän ID.</li>
 </ul>
-![Alt text](/_images/example1.png?raw=true "Example")
+![Alt text](/tree/main/_images/example1.png?raw=true "Example")
