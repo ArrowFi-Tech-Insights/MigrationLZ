@@ -27,4 +27,4 @@
 <li>managedByTenantId: Hallinta-tenantin ID</li>
 <li>principalId: Jokaiseen authorization kohtaan laitetaan principalID:ksi hallinta-tenanttiin luoman AD-ryhmän ID.</li>
 </ul>
-<p>![alt text](https://github.com/ArrowFi-Tech-Insights/MigrationLZ/blob/main/_images/example1.png "Example")</p>
+<p>![alt text](https://github.com/ArrowFi-Tech-Insights/MigrationLZ/blob/main/_images/example1.png?raw=true "Example")</p>
