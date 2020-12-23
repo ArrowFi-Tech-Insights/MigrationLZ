@@ -12,15 +12,15 @@
 <p>Tämän esimerkin oletus regioona on North Europe.</p>
 
 <h2>1. Valmistelevat toimenpiteet</h2>
-<p>Asenna Git koneellesi. <a href="https://github.com/git-guides/install-git#:~:text=To%20install%20Git%2C%20navigate%20to,installation%20by%20typing%3A%20git%20version%20.">Ohje</a>.</p>
-<p>Kopioi/kloonaa tämä Github repository paikalliselle koneellesi. (komento: "git clone https://github.com/ArrowFi-Tech-Insights/MigrationLZ.git")</p>
-<p>Asenna Powershell modulit. (komento: Install-Module -Name Az.Blueprint, Az.ManagedServiceIdentity)</p>
-<p>Luo Azure AD-ryhmä hallinta-tenanttiin</p>
+<p>1.1 Asenna Git koneellesi. <a href="https://github.com/git-guides/install-git#:~:text=To%20install%20Git%2C%20navigate%20to,installation%20by%20typing%3A%20git%20version%20.">Ohje</a>.</p>
+<p>1.2 Kopioi/kloonaa tämä Github repository paikalliselle koneellesi. (komento: "git clone https://github.com/ArrowFi-Tech-Insights/MigrationLZ.git")</p>
+<p>1.3 Asenna Powershell modulit. (Powershell-komento: Install-Module -Name Az.Blueprint, Az.ManagedServiceIdentity)</p>
+<p>1.4 Luo Azure AD-ryhmä hallinta-tenanttiin</p>
 
 <h2>2. Lighthouse delegaation tekeminen</h2>
-<p>Kirjaudu Powershellillä loppuasiakkaan Azure-tenanttiin tunnuksella jolla on owner tason oikeudet loppuasiakkaan Azure subscriptioniin.</p>
-<p>Valitse Azure subscription jolle haluat tehdä delegaation.</p>
-<p>Avaa "delegation_templates" kansiosta "delegatedResourceManagement.parameters.json" tiedosto editoriin ja muokkaa seuraavat asiat:</p>
+<p>2.1 Kirjaudu Powershellillä loppuasiakkaan Azure-tenanttiin tunnuksella jolla on owner tason oikeudet loppuasiakkaan Azure subscriptioniin.</p>
+<p>2.2 Valitse Azure subscription jolle haluat tehdä delegaation. (Powershell komento "Select-AzSubscription -SubscriptionId XXXXXXSubIDXXXXX")</p>
+<p>2.3 Avaa "delegation_templates" kansiosta "delegatedResourceManagement.parameters.json" tiedosto editoriin ja muokkaa seuraavat asiat:</p>
 <ul>
 <li>mspOfferName: Hallinta-tenantin yrityksen nimi</li>
 <li>mspOfferDescription: </li>
@@ -28,6 +28,11 @@
 <li>principalId: Jokaiseen authorization kohtaan laitetaan principalID:ksi hallinta-tenanttiin luoman AD-ryhmän ID.</li>
 </ul>
 <img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example1.png?token=APHBNNI67GXSIR5DKYIGUT274HYGY" width="800px" height="auto">
-<p>Suorita "create_delegation.ps1"-skripti ja ota talteen skriptin tulostama User Assigned Identity ID</p>
+<p>2.4 Suorita "create_delegation.ps1"-skripti ja ota talteen skriptin tulostama User Assigned Identity ID</p>
 <p>Tämän jälkeen hallinta-tenantista on pääsy määrittelemääsi subsriptioniin.</p>
 <h2>3. Blueprintin deployment loppuasiakkaan subscriptioniin</h2>
+<p>3.1 Importtaa Blueprint tiedostot azureen komennolla: "Import-AzBlueprintWithArtifact -Name CAF_LZ -SubscriptionId 752467a1-ff3d-49f0-a1fe-5650aeed594a -InputPath /Users/136159/Documents/Git/MigrationLZ/caf-migration-landing-zone -IncludeSubFolders"</p>
+<p>3.2 Julkaise blueprintistä ensimmäinen version:</p>
+<p>3.2.1 Hae blueprintin tiedot $bp muuttujaan komennolla: "$bp = Get-AzBlueprint -Name CAF_LZ"</p>
+<p>3.2.2 Julkaise ensimmäinen versio blueprintistä komennolla: "Publish-AzBlueprint -Blueprint  $bp -Version 1.0"
+<p>3.2.3 Assignaa julkaistu blueprint kohde subsciptioniin. Tässä vaiheessa käytetään kohdassa 3. saatua User defidend managed identityä: 
