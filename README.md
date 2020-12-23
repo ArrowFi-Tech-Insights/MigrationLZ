@@ -27,8 +27,4 @@
 <li>managedByTenantId: Hallinta-tenantin ID</li>
 <li>principalId: Jokaiseen authorization kohtaan laitetaan principalID:ksi hallinta-tenanttiin luoman AD-ryhmän ID.</li>
 </ul>
-![example_pic](https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example1.png "Example")
-
-<p>Suorita "create_delegation.ps1"-skripti ja ota talteen skriptin tulostama User Assigned Identity ID</p>
-<p>Tämän jälkeen hallinta-tenantista on pääsy määrittelemääsi subsriptioniin.</p>
-<h2>3. Blueprintin deployment loppuasiakkaan subscriptioniin</h2>
+<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example1.png?token=APHBNNI67GXSIR5DKYIGUT274HYGY" width="800px" height="auto">
