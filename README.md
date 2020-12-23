@@ -41,8 +41,8 @@
 <li>Organization_Name. Lisää organisaatiosi nimi</li>
 <li>userAssignedIdentities. Lisää kohdassa 2.4 talteen otettu User Assigned Identity ID</li>
 </ul>
-<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example2.png?token=APHBNNKQ5VNVOZLTPXVUDSC74MC5I" width="800px" height="auto">
-<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example3.png?token=APHBNNKQ5VNVOZLTPXVUDSC74MC5I" width="800px" height="auto">
+<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example2.png?token=APHBNNLGJZKWGRKBJC2WZ3K74MDBI" width="800px" height="auto">
+<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example3.png?token=APHBNNJ72ZAHL253RJULBCC74MDC6" width="800px" height="auto">
 </p>
 
 <p>3.2.4 Assignaa julkaistu blueprint kohde subsciptioniin komennolla: <br><br>"New-AzBlueprintAssignment -Blueprint $bp -Name 'assignMyBlueprint' -AssignmentFile .\blueprintAssignment.json -SubscriptionId 752467a1-ff3d-49f0-a1fe-5650aeed594a"</p> 
