@@ -13,4 +13,4 @@ New-AzRoleAssignment -ObjectId $uami.PrincipalId -RoleDefinitionName "Owner" -Sc
 
 New-AzDeployment -name lighthouseOnboarding -Location $location -TemplateFile $lighthouseTemplate -TemplateParameterFile $lighthouseTemplateParameters -verbose
 $id = $uami.Id
-Write-Host "Lähetä palveluntarjoajalle seuraava ID: $id"
+Write-Host "Lähetä palveluntarjoajalle User Assigned Identity ID: $id"

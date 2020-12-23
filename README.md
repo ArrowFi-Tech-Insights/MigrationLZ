@@ -17,7 +17,7 @@
 <p>Asenna Powershell modulit. (komento: Install-Module -Name Az.Blueprint, Az.ManagedServiceIdentity)</p>
 <p>Luo Azure AD-ryhmä hallinta-tenanttiin</p>
 
-<h2>2. Lighthouse delegaation tekeminen.</h2>
+<h2>2. Lighthouse delegaation tekeminen</h2>
 <p>Kirjaudu Powershellillä loppuasiakkaan Azure-tenanttiin tunnuksella jolla on owner tason oikeudet loppuasiakkaan Azure subscriptioniin.</p>
 <p>Valitse Azure subscription jolle haluat tehdä delegaation.</p>
 <p>Avaa "delegation_templates" kansiosta "delegatedResourceManagement.parameters.json" tiedosto editoriin ja muokkaa seuraavat asiat:</p>
@@ -27,4 +27,8 @@
 <li>managedByTenantId: Hallinta-tenantin ID</li>
 <li>principalId: Jokaiseen authorization kohtaan laitetaan principalID:ksi hallinta-tenanttiin luoman AD-ryhmän ID.</li>
 </ul>
-![example_pic](https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example1.png?token=APHBNNI67GXSIR5DKYIGUT274HYGY "Example")
+![example_pic](https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example1.png "Example")
+
+<p>Suorita "create_delegation.ps1"-skripti ja ota talteen skriptin tulostama User Assigned Identity ID</p>
+<p>Tämän jälkeen hallinta-tenantista on pääsy määrittelemääsi subsriptioniin.</p>
+<h2>3. Blueprintin deployment loppuasiakkaan subscriptioniin</h2>
