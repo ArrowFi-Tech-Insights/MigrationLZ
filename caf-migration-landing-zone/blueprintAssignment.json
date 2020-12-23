@@ -1,6 +1,6 @@
 {
     "properties": {
-        "blueprintId":"/subscriptions/752467a1-ff3d-49f0-a1fe-5650aeed594a/providers/Microsoft.Blueprint/blueprints/CAF_LZ",
+        "blueprintId":"/subscriptions/##SubscriptionID##/providers/Microsoft.Blueprint/blueprints/Migration_LZ",
         "parameters": {
             "Organization_Name": {
                 "type": "string",
@@ -8,7 +8,7 @@
                     "displayName": "Enter your organization name (e.g. Contoso), must be unique",
                     "description": "Organization_Name"
                 },
-                "Value": "Arrow"
+                "Value": "###OrganisaatiosiNimi###"
             },
             "AzureRegion": {
                 "type": "string",
@@ -51,7 +51,7 @@
                     "displayName": "Azure AD Group or User 'ObjectID' to grant permissions in Key Vault.(abc123de-f456-ghi7-89jk-l0mno123pqr4)",
                     "description": "KV-AccessPolicy"
                 },
-                "value": "6d85c05e-32f9-4865-8418-b380ad830576"
+                "value": "##KeyVault-AD-Ryhman-Nimi##"
 
             },
             "LogAnalytics_DataRetention": {
@@ -108,7 +108,6 @@
             "SharedServices-RG": {
             },
             "Network-RG": {
-
             },
             "Migrate-RG": {
             }
@@ -121,7 +120,7 @@
             "type": "userAssigned",
             "tenantId": "869ae420-e2d1-4cd1-a0c9-54b0ea861b66",
             "userAssignedIdentities": {
-                "/subscriptions/752467a1-ff3d-49f0-a1fe-5650aeed594a/resourcegroups/rg-Lighthouse-uami/providers/Microsoft.ManagedIdentity/userAssignedIdentities/lighthouse-uami": {}
+                "/subscriptions/#######SubID######/resourcegroups/rg-Lighthouse-uami/providers/Microsoft.ManagedIdentity/userAssignedIdentities/lighthouse-uami": {}
             }
         },
     "location": "northeurope",
