@@ -7,6 +7,7 @@
 <li>Azure tenantti ja subscription loppuasiakkaan puolelle.</li>
 <li>Powershell modulit: Az.Blueprint, Az.ManagedServiceIdentity</li>
 <li>Azure AD-ryhmä hallinta-tenanttiin jolla annetaan pääsy loppuasiakkaan subscriptioniin.</li>
+<li>Azure AD-ryhmä loppuasiakkaan-tenanttiin, jolle annetaan key vaultin käyttöoikeus</li>
 </ul>
 </p>
 <p>Tämän esimerkin oletus regioona on North Europe.</p>
@@ -42,11 +43,12 @@
 <ul>
 <li>blueprintId. Lisää kohde-subscriptionin ID</li>
 <li>Organization_Name. Lisää organisaatiosi nimi</li>
-<li>KV-AccessPolicy. Azure AD-ryhmän ID, jolle sallitaan Key Vaultin käyttö.</li>
+<li>KV-AccessPolicy. Loppuasiakkaan Azure AD-ryhmän ID, jolle sallitaan Key Vaultin käyttö.</li>
 <li>userAssignedIdentities. Lisää kohdassa 2.4 talteen otettu User Assigned Identity ID</li>
 </ul>
 <img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example2.png" width="800px" height="auto">
 <img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example3.png" width="800px" height="auto">
+<img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example4.png" width="800px" height="auto">
 </p>
 
 <p>3.2.4 Assignaa julkaistu blueprint kohde subsciptioniin komennolla: <br><br>"New-AzBlueprintAssignment -Blueprint $bp -Name 'assignMigrationLZ' -AssignmentFile ./caf-migration-landing-zone/blueprintAssignment.json -SubscriptionId ##SubscriptionID##""</p> 
