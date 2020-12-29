@@ -51,7 +51,7 @@
                     "displayName": "Azure AD Group or User 'ObjectID' to grant permissions in Key Vault.(abc123de-f456-ghi7-89jk-l0mno123pqr4)",
                     "description": "KV-AccessPolicy"
                 },
-                "value": "##KeyVault-AD-Ryhman-Nimi##"
+                "value": "##Kohdassa 1.6 luomasi KeyVault-AD-Ryhman-ID##"
 
             },
             "LogAnalytics_DataRetention": {
@@ -120,7 +120,7 @@
             "type": "userAssigned",
             "tenantId": "869ae420-e2d1-4cd1-a0c9-54b0ea861b66",
             "userAssignedIdentities": {
-                "/subscriptions/#######SubID######/resourcegroups/rg-Lighthouse-uami/providers/Microsoft.ManagedIdentity/userAssignedIdentities/lighthouse-uami": {}
+                "##Kohdassa 2.4 talteenottamasi User Assigned Identity ID##": {}
             }
         },
     "location": "northeurope",

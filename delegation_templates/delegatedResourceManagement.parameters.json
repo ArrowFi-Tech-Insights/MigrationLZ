@@ -3,28 +3,28 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "mspOfferName": {
-            "value": "Arrow ECS FI Managed Services"
+            "value": "Organization X Managed Services"
         },
         "mspOfferDescription": {
-            "value": "Arrow ECS FI Azure Lighthouse Demo"
+            "value": "Azure Lighthouse Demo"
         },
         "managedByTenantId": {
-            "value": "b85004c7-a65d-4036-b353-e6cbaa024955"
+            "value": "##HallintaTenantin ID##"
         },
         "authorizations": {
             "value": [
                 {
-                    "principalId": "93a3cca8-8cf1-49a7-b8d6-4fcdb39a05b9",
+                    "principalId": "##Kohdassa 1.5 luomasi Azure AD-ryhmän ID##",
                     "principalIdDisplayName": "Azure Lighthouse Admins - Contributor",
                     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c"
                 },
                 {
-                    "principalId": "93a3cca8-8cf1-49a7-b8d6-4fcdb39a05b9",
+                    "principalId": "##Kohdassa 1.5 luomasi Azure AD-ryhmän ID##",
                     "principalIdDisplayName": "Name - Blueprint Operator",
                     "roleDefinitionId": "437d2ced-4a38-4302-8479-ed2bcb43d090"
                 },
                 {
-                    "principalId": "93a3cca8-8cf1-49a7-b8d6-4fcdb39a05b9",
+                    "principalId": "##Kohdassa 1.5 luomasi Azure AD-ryhmän ID##",
                     "principalIdDisplayName": "Name - Managed Identity Operator",
                     "roleDefinitionId": "f1a07417-d97a-45cb-824c-7a7467783830"
                 }
