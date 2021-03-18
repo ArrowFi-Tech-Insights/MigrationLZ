@@ -18,7 +18,7 @@
             "displayName": "Select the Region to deploy Azure Migrate",
             "description": "Azure Migrate Location"
           },
-          "defaultValue": "West US 2",
+          "defaultValue": "[parameters('Azure_Migrate_Location')]",
           "allowedValues": [
           "Central US",
           "East Asia",

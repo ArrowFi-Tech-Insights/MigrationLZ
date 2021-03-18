@@ -46,6 +46,7 @@
 <li>blueprintId. Lisää kohde-subscriptionin ID</li>
 <li>Organization_Name. Lisää organisaatiosi nimi</li>
 <li>KV-AccessPolicy. Loppuasiakkaan Azure AD-ryhmän ID, jolle sallitaan Key Vaultin käyttö.</li>
+<li>tenantId. Lisää asiakkaan Azure AD-tenantin ID User Assigned Identity ID:lle</li>
 <li>userAssignedIdentities. Lisää kohdassa 2.4 talteen otettu User Assigned Identity ID</li>
 </ul>
 <img src="https://raw.githubusercontent.com/ArrowFi-Tech-Insights/MigrationLZ/main/_images/example2.png" width="800px" height="auto">
